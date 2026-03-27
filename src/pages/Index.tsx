@@ -123,28 +123,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* TRACKS */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <SectionHeading title="Event Tracks" subtitle="Explore 6 sustainability tracks across Hackathon and Studyathon." />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {tracks.map((t, i) => (
-              <motion.button
-                key={i}
-                {...fadeUp}
-                transition={{ delay: i * 0.08 }}
-                onClick={() => setSelectedTrack(t)}
-                className="glass rounded-xl p-6 text-left hover:glow-green-sm transition-all hover:-translate-y-1 group"
-              >
-                <span className="text-3xl mb-3 block group-hover:animate-float">{t.icon}</span>
-                <h3 className="font-heading font-semibold text-sm text-foreground">{t.title}</h3>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <TrackModal track={selectedTrack} onClose={() => setSelectedTrack(null)} />
 
       {/* CTA */}
       <section className="py-24 px-4">
