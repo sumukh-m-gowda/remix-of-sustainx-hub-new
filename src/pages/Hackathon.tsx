@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Users, BookOpen, Scale } from "lucide-react";
+import { Users, BookOpen, Scale, FileText, Presentation, Lightbulb, Rocket, CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import TrackModal, { Track } from "@/components/TrackModal";
 
@@ -191,6 +192,94 @@ const Hackathon = () => {
                     />
                   </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Deliverables" subtitle="Each team must submit and present the following" />
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
+            <motion.div {...fadeUp} className="glass rounded-xl p-6">
+              <Rocket className="text-primary mb-3" size={28} />
+              <h3 className="font-heading font-bold text-foreground mb-2">Prototype / Product Demo</h3>
+              <p className="text-sm text-muted-foreground">A functional prototype or technical demonstration of the solution.</p>
+            </motion.div>
+            <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="glass rounded-xl p-6">
+              <Presentation className="text-primary mb-3" size={28} />
+              <h3 className="font-heading font-bold text-foreground mb-2">Slide Deck Presentation</h3>
+              <p className="text-sm text-muted-foreground">Covering problem, solution, tech stack, demo, impact & future scope.</p>
+            </motion.div>
+          </div>
+          <motion.div {...fadeUp} className="glass rounded-xl p-6">
+            <h4 className="font-heading font-bold text-secondary mb-3">Presentation Must Include</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {["Problem Statement", "Understanding of the Problem", "Proposed Solution", "Technology Stack Used", "Prototype Demonstration", "Sustainability Impact", "Future Improvements"].map((d, i) => (
+                <motion.div key={i} {...fadeUp} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <FileText size={14} className="text-primary shrink-0" />
+                  {d}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Presentation Format */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Presentation Format" />
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="glass rounded-xl p-5 text-center">
+              <Presentation className="mx-auto mb-2 text-primary" size={24} />
+              <p className="text-sm text-muted-foreground">Presentation & Demo: <strong className="text-foreground">5 min</strong></p>
+            </div>
+            <div className="glass rounded-xl p-5 text-center">
+              <Lightbulb className="mx-auto mb-2 text-primary" size={24} />
+              <p className="text-sm text-muted-foreground">Q&A with Judges: <strong className="text-foreground">2 min</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rules */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Rules & Guidelines" />
+          <div className="glass rounded-xl p-6 space-y-3">
+            {[
+              "All work must be original. Plagiarism will lead to disqualification.",
+              "Use of AI tools and open-source resources is allowed.",
+              "Teams must adhere to time limits during presentations.",
+              "Judges' decisions will be final and binding.",
+            ].map((r, i) => (
+              <motion.div key={i} {...fadeUp} className="flex items-center gap-3 text-sm text-muted-foreground">
+                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</span>
+                {r}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tips */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Tips to Perform Well" />
+          <div className="glass rounded-xl p-6 space-y-3">
+            {[
+              "Focus on solving real-world sustainability problems",
+              "Build a simple but functional prototype",
+              "Demonstrate the technical feasibility of your idea",
+              "Clearly show the environmental or social impact",
+              "Keep your presentation clear, structured, and concise",
+            ].map((tip, i) => (
+              <motion.div key={i} {...fadeUp} className="flex items-center gap-3 text-sm text-muted-foreground">
+                <CheckCircle size={16} className="text-secondary shrink-0" />
+                {tip}
               </motion.div>
             ))}
           </div>
