@@ -53,7 +53,7 @@ const Index = () => {
             transition={{ delay: 0.6 }}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-muted-foreground"
           >
-            <span>📅 15 March 2026</span>
+            <span>📅 12 April 2026</span>
             <span className="hidden sm:inline">•</span>
             <span>📍 MRD Auditorium, PESU ECC</span>
             <span className="hidden sm:inline">•</span>
