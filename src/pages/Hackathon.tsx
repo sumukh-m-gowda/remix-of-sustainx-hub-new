@@ -169,31 +169,33 @@ const Hackathon = () => {
 
       <TrackModal track={selectedTrack} onClose={() => setSelectedTrack(null)} />
 
-      {/* Evaluation */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <SectionHeading title="Evaluation Criteria" subtitle="Total: 100 points" />
-          <div className="max-w-2xl mx-auto space-y-3">
-            {criteria.map((c, i) => (
-              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.05 }} className="flex items-center gap-4">
-                <div className="flex-1">
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="text-foreground/80">{c.label}</span>
-                    <span className="text-secondary font-heading font-bold">{c.score}</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-muted overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${c.score}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: i * 0.1 }}
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+      {/* Deliverables */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Deliverables" subtitle="Each team must submit and present the following" />
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
+            <motion.div {...fadeUp} className="glass rounded-xl p-6">
+              <Rocket className="text-primary mb-3" size={28} />
+              <h3 className="font-heading font-bold text-foreground mb-2">Prototype / Product Demo</h3>
+              <p className="text-sm text-muted-foreground">A functional prototype or technical demonstration of the solution.</p>
+            </motion.div>
+            <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="glass rounded-xl p-6">
+              <Presentation className="text-primary mb-3" size={28} />
+              <h3 className="font-heading font-bold text-foreground mb-2">Slide Deck Presentation</h3>
+              <p className="text-sm text-muted-foreground">Covering problem, solution, tech stack, demo, impact & future scope.</p>
+            </motion.div>
           </div>
+          <motion.div {...fadeUp} className="glass rounded-xl p-6">
+            <h4 className="font-heading font-bold text-secondary mb-3">Presentation Must Include</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {["Problem Statement", "Understanding of the Problem", "Proposed Solution", "Technology Stack Used", "Prototype Demonstration", "Sustainability Impact", "Future Improvements"].map((d, i) => (
+                <motion.div key={i} {...fadeUp} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <FileText size={14} className="text-primary shrink-0" />
+                  {d}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -244,7 +246,34 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Rules */}
+      {/* Evaluation */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <SectionHeading title="Evaluation Criteria" subtitle="Total: 100 points" />
+          <div className="max-w-2xl mx-auto space-y-3">
+            {criteria.map((c, i) => (
+              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.05 }} className="flex items-center gap-4">
+                <div className="flex-1">
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-foreground/80">{c.label}</span>
+                    <span className="text-secondary font-heading font-bold">{c.score}</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-muted overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${c.score}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: i * 0.1 }}
+                      className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-muted/20">
         <div className="container mx-auto max-w-3xl">
           <SectionHeading title="Rules & Guidelines" />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
-import { Users, BookOpen, Lightbulb, FileText, Presentation, Scale } from "lucide-react";
+import { Users, BookOpen, Lightbulb, FileText, Presentation, Scale, CheckCircle } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -155,6 +155,27 @@ const Studyathon = () => (
             <motion.div key={i} {...fadeUp} className="flex items-center gap-3 text-sm text-muted-foreground">
               <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold shrink-0">{i + 1}</span>
               {r}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Tips */}
+    <section className="py-16 px-4">
+      <div className="container mx-auto max-w-3xl">
+        <SectionHeading title="Tips to Perform Well" />
+        <div className="glass rounded-xl p-6 space-y-3">
+          {[
+            "Focus on real-world problems",
+            "Support your idea with data and research",
+            "Think about practical implementation",
+            "Show environmental impact clearly",
+            "Keep the presentation clear and simple",
+          ].map((tip, i) => (
+            <motion.div key={i} {...fadeUp} className="flex items-center gap-3 text-sm text-muted-foreground">
+              <CheckCircle size={16} className="text-secondary shrink-0" />
+              {tip}
             </motion.div>
           ))}
         </div>
