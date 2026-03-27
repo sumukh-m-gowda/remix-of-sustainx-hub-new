@@ -87,13 +87,13 @@ const tracks: Track[] = [
 ];
 
 const criteria = [
-  { label: "Problem Understanding", score: 15 },
-  { label: "Innovation", score: 20 },
-  { label: "Technical Implementation", score: 20 },
-  { label: "Sustainability Impact", score: 15 },
-  { label: "Feasibility & Scalability", score: 15 },
-  { label: "Presentation & Demo", score: 10 },
-  { label: "UI/UX", score: 5 },
+  { label: "Problem Understanding", score: "15/25" },
+  { label: "Innovation", score: "20/20" },
+  { label: "Technical Implementation", score: "20/20" },
+  { label: "Sustainability Impact", score: "15/15" },
+  { label: "Feasibility & Scalability", score: "15/15" },
+  { label: "Presentation & Demo", score: "10/10" },
+  { label: "UI/UX", score: "5/5" },
 ];
 
 const Hackathon = () => {
@@ -231,7 +231,7 @@ const Hackathon = () => {
                   <div className="h-2 rounded-full bg-muted overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: `${c.score}%` }}
+                      whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: i * 0.1 }}
                       className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
