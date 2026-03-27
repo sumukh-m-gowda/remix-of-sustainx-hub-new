@@ -56,8 +56,6 @@ const Index = () => {
             <span>📅 12 April 2026</span>
             <span className="hidden sm:inline">•</span>
             <span>📍 MRD Auditorium, PESU ECC</span>
-            <span className="hidden sm:inline">•</span>
-            <span>🌿 Solaris Club</span>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="mt-8">
