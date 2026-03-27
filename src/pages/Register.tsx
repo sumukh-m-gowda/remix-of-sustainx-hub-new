@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { QrCode, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
+import qrImage from "./image.png";
 
 const Register = () => (
   <div className="min-h-screen pt-24 flex items-center justify-center px-4">
@@ -16,13 +17,13 @@ const Register = () => (
         Scan the QR code to register via PESU Academy Portal.
       </p>
 
-      <div className="mx-auto w-48 h-48 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mb-6">
-        <QrCode className="text-primary" size={80} strokeWidth={1} />
+      <div className="mx-auto w-48 h-48 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mb-6 overflow-hidden">
+        <img src={qrImage} alt="QR Code" className="w-full h-full object-contain" />
       </div>
 
       <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
         <Calendar size={16} className="text-primary" />
-        <span>Registration Deadline: <strong className="text-foreground">12 March 2026</strong></span>
+        <span>Registration Deadline: <strong className="text-foreground">9 April 2026</strong></span>
       </div>
     </motion.div>
   </div>
