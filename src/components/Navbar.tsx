@@ -9,6 +9,7 @@ const links = [
   { to: "/studyathon", label: "Studyathon" },
   { to: "/register", label: "Register Now", glow: true },
   { to: "/contact", label: "Contact" },
+  { to: "/faq", label: "FAQ" },
 ];
 
 const Navbar = () => {
