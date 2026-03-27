@@ -72,24 +72,61 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <SectionHeading title="About SustainX" subtitle="A sustainability innovation event consisting of two major components." />
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              { title: "Hackathon", desc: "Build technological solutions for sustainability challenges using hardware, software, AI, and IoT.", icon: "🛠️" },
-              { title: "Studyathon", desc: "Research and design sustainable solutions through structured analysis, critical thinking, and collaboration.", icon: "📚" },
-            ].map((item, i) => (
-              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.15 }} className="glass rounded-2xl p-8 hover:glow-green-sm transition-shadow">
-                <span className="text-4xl mb-4 block">{item.icon}</span>
-                <h3 className="font-heading font-bold text-xl text-secondary mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+<section className="py-20 px-4">
+  <div className="container mx-auto">
 
+    <SectionHeading
+      title="About SustainX"
+      subtitle="A sustainability innovation event consisting of two major components."
+    />
+
+    <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+      {/* Hackathon Card */}
+      <Link to="/hackathon">
+        <motion.div
+          {...fadeUp}
+          className="glass rounded-2xl p-8 hover:glow-green-sm transition-shadow cursor-pointer"
+        >
+          <span className="text-4xl mb-4 block">🛠️</span>
+
+          <h3 className="font-heading font-bold text-xl text-secondary mb-2">
+            Hackathon
+          </h3>
+
+          <p className="text-muted-foreground text-sm">
+            Build technological solutions for sustainability challenges
+            using hardware, software, AI, and IoT.
+          </p>
+
+        </motion.div>
+      </Link>
+
+      {/* Studyathon Card */}
+      <Link to="/studyathon">
+        <motion.div
+          {...fadeUp}
+          transition={{ delay: 0.15 }}
+          className="glass rounded-2xl p-8 hover:glow-green-sm transition-shadow cursor-pointer"
+        >
+          <span className="text-4xl mb-4 block">📚</span>
+
+          <h3 className="font-heading font-bold text-xl text-secondary mb-2">
+            Studyathon
+          </h3>
+
+          <p className="text-muted-foreground text-sm">
+            Research and design sustainable solutions through structured
+            analysis, critical thinking, and collaboration.
+          </p>
+
+        </motion.div>
+      </Link>
+
+    </div>
+
+  </div>
+</section>
       {/* WHY PARTICIPATE */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
