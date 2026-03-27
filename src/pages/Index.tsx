@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Zap, Recycle, Building2, Sprout, TreePine, Heart,
   Users, Lightbulb, Trophy, GraduationCap, Globe
 } from "lucide-react";
 import HeroScene from "@/components/HeroScene";
 import CountdownTimer from "@/components/CountdownTimer";
 import SectionHeading from "@/components/SectionHeading";
-import TrackModal, { Track } from "@/components/TrackModal";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
