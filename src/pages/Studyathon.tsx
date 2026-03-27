@@ -93,7 +93,7 @@ const Studyathon = () => (
           {[
             { icon: Users, text: "3–4 participants per team" },
             { icon: BookOpen, text: "Cross-discipline collaboration encouraged" },
-            { icon: Scale, text: "Register by 9 March 2026" },
+            { icon: Scale, text: "Register by 9 April 2026" },
           ].map((item, i) => (
             <motion.div
               key={i}
