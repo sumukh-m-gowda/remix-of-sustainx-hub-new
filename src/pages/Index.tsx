@@ -14,15 +14,6 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
-const tracks: Track[] = [
-  { title: "Smart Energy & Climate Tech", icon: "⚡", problems: [{ title: "Overview", description: "Build innovative solutions for energy monitoring, solar optimization, and carbon footprint reduction." }] },
-  { title: "Waste Management & Circular Economy", icon: "♻️", problems: [{ title: "Overview", description: "Create smart waste segregation, fill-level monitoring, and recycling platforms." }] },
-  { title: "Sustainable Cities & Infrastructure", icon: "🏙️", problems: [{ title: "Overview", description: "Design smart street lighting, water leakage detection, and air quality monitoring systems." }] },
-  { title: "Sustainable Agriculture & Food Systems", icon: "🌱", problems: [{ title: "Overview", description: "Develop smart irrigation, crop health monitoring, and food waste reduction solutions." }] },
-  { title: "Biodiversity & Environmental Monitoring", icon: "🌿", problems: [{ title: "Overview", description: "Build forest fire detection, wildlife tracking, and water quality monitoring devices." }] },
-  { title: "Sustainable Lifestyle & Behavioral Change", icon: "💚", problems: [{ title: "Overview", description: "Create eco-friendly product recommenders, carbon trackers, and gamified sustainability platforms." }] },
-];
-
 const whyCards = [
   { icon: Globe, text: "Work on real sustainability problems" },
   { icon: Lightbulb, text: "Build impactful technology" },
@@ -32,7 +23,6 @@ const whyCards = [
 ];
 
 const Index = () => {
-  const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
 
   return (
     <div className="min-h-screen">
