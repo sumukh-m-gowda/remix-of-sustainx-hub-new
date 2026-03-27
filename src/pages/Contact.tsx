@@ -1,4 +1,4 @@
-make in centerimport { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
 const Contact = () => (
   <div className="min-h-screen pt-24 px-4 pb-16">
