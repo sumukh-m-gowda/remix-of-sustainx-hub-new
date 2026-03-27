@@ -51,4 +51,3 @@ const Contact = () => (
   </div>
 );
 export default Contact;
- get the complete code
