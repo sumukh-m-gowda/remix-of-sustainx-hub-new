@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
+make in centerimport { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
-
 const Contact = () => (
   <div className="min-h-screen pt-24 px-4 pb-16">
     <div className="container mx-auto max-w-4xl">
@@ -11,7 +10,6 @@ const Contact = () => (
       >
         Get in <span className="text-primary">Touch</span>
       </motion.h1>
-
       <div className="grid md:grid-cols-2 gap-6">
         {/* Contact Card */}
         <motion.div
@@ -28,14 +26,12 @@ const Contact = () => (
               <p>Karnataka 560100</p>
             </div>
           </div>
-
           <div className="flex gap-4 items-center">
             <Mail className="text-primary shrink-0" size={20} />
             <a href="mailto:solarispesuecc@pes.edu" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               solarispesuecc@pes.edu
             </a>
           </div>
-
           <div className="space-y-2">
             {[
               { name: "Bhuvan V", phone: "+91 98806 37357" },
@@ -50,10 +46,9 @@ const Contact = () => (
             ))}
           </div>
         </motion.div>
-
       </div>
     </div>
   </div>
 );
-
 export default Contact;
+ get the complete code
