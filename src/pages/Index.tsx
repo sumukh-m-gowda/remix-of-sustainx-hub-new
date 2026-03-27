@@ -108,6 +108,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* PRIZE POOL */}
+      <section className="py-20 px-4">
+        <motion.div {...fadeUp} className="container mx-auto text-center">
+          <div className="glass rounded-3xl p-12 md:p-16 max-w-2xl mx-auto glow-green-sm">
+            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2 font-heading">Total Prize Pool</p>
+            <h2 className="text-5xl md:text-7xl font-heading font-black text-primary glow-text">₹24K</h2>
+          </div>
+        </motion.div>
+      </section>
 
       {/* CTA */}
       <section className="py-24 px-4">
