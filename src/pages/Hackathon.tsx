@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Users, BookOpen, Scale } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import TrackModal, { Track } from "@/components/TrackModal";
 
@@ -110,6 +111,25 @@ const Hackathon = () => {
           <motion.p {...fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
             A technology-driven competition where participants develop innovative sustainability solutions using hardware, software, AI, and IoT.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Team Structure */}
+      <section className="py-12 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-3xl">
+          <SectionHeading title="Team Structure" />
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { icon: Users, text: "3–4 participants per team" },
+              { icon: BookOpen, text: "Cross-discipline collaboration encouraged" },
+              { icon: Scale, text: "Bring your own laptops & hardware" },
+            ].map((item, i) => (
+              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="glass rounded-xl p-6 text-center">
+                <item.icon className="mx-auto mb-3 text-primary" size={28} />
+                <p className="text-sm text-muted-foreground">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
