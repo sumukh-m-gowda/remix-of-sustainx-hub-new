@@ -21,6 +21,7 @@ const Footer = () => (
             { to: "/hackathon", label: "Hackathon" },
             { to: "/studyathon", label: "Studyathon" },
             { to: "/register", label: "Register" },
+            { to: "/faq", label: "FAQ" },
             { to: "/contact", label: "Contact" },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="text-muted-foreground text-sm hover:text-primary transition-colors">
@@ -32,14 +33,14 @@ const Footer = () => (
       <div>
         <h4 className="font-heading font-semibold mb-3 text-sm text-foreground/80">Connect</h4>
         <div className="flex gap-3">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Instagram size={20} /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
+          <a href="https://www.instagram.com/solaris.pesu/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Instagram size={20} /></a>
+          <a href="https://www.linkedin.com/company/solaris-pesu-ecc/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
           <a href="mailto:solarispesuecc@pes.edu" className="text-muted-foreground hover:text-primary transition-colors"><Mail size={20} /></a>
         </div>
       </div>
     </div>
     <div className="border-t border-border/20 py-4 text-center text-muted-foreground text-xs">
-      © 2026 Solaris PESU ECC – SustainX
+      © 2026 Solaris PESU ECC
     </div>
   </footer>
 );

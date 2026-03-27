@@ -199,36 +199,6 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Deliverables */}
-      <section className="py-16 px-4 bg-muted/20">
-        <div className="container mx-auto max-w-3xl">
-          <SectionHeading title="Deliverables" subtitle="Each team must submit and present the following" />
-          <div className="grid sm:grid-cols-2 gap-4 mb-6">
-            <motion.div {...fadeUp} className="glass rounded-xl p-6">
-              <Rocket className="text-primary mb-3" size={28} />
-              <h3 className="font-heading font-bold text-foreground mb-2">Prototype / Product Demo</h3>
-              <p className="text-sm text-muted-foreground">A functional prototype or technical demonstration of the solution.</p>
-            </motion.div>
-            <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="glass rounded-xl p-6">
-              <Presentation className="text-primary mb-3" size={28} />
-              <h3 className="font-heading font-bold text-foreground mb-2">Slide Deck Presentation</h3>
-              <p className="text-sm text-muted-foreground">Covering problem, solution, tech stack, demo, impact & future scope.</p>
-            </motion.div>
-          </div>
-          <motion.div {...fadeUp} className="glass rounded-xl p-6">
-            <h4 className="font-heading font-bold text-secondary mb-3">Presentation Must Include</h4>
-            <div className="grid grid-cols-2 gap-2">
-              {["Problem Statement", "Understanding of the Problem", "Proposed Solution", "Technology Stack Used", "Prototype Demonstration", "Sustainability Impact", "Future Improvements"].map((d, i) => (
-                <motion.div key={i} {...fadeUp} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <FileText size={14} className="text-primary shrink-0" />
-                  {d}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Presentation Format */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-3xl">

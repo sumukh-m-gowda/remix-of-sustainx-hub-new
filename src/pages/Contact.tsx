@@ -51,24 +51,6 @@ const Contact = () => (
           </div>
         </motion.div>
 
-        {/* Map */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-          className="rounded-2xl overflow-hidden border border-border/30 min-h-[300px]"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7553!2d77.6608!3d12.8526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b2867bb6a29%3A0x73b3ab2e0e6e3927!2sPES%20University%20Electronic%20City%20Campus!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0, minHeight: 300 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="PES University ECC Location"
-          />
-        </motion.div>
       </div>
     </div>
   </div>
