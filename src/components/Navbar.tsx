@@ -7,9 +7,9 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/hackathon", label: "Hackathon" },
   { to: "/studyathon", label: "Studyathon" },
-  { to: "/register", label: "Register Now", glow: true },
-  { to: "/contact", label: "Contact" },
   { to: "/faq", label: "FAQ" },
+  { to: "/contact", label: "Contact" },
+  { to: "/register", label: "Register Now", glow: true },
 ];
 
 const Navbar = () => {
