@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import solarisLogo from "@/assets/solaris-logo.png";
 import { motion } from "framer-motion";
 import {
   Users, Lightbulb, Trophy, GraduationCap, Globe
@@ -31,6 +32,7 @@ const Index = () => {
         <HeroScene />
         <div className="container mx-auto px-4 text-center z-10 py-32">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <img src={solarisLogo} alt="Solaris" className="h-16 md:h-24 mx-auto mb-4" />
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-black mb-4 leading-tight">
               <span className="text-primary">Sustain</span>
               <span className="text-secondary">X</span>
