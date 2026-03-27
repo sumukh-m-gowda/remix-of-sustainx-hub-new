@@ -246,7 +246,34 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Rules */}
+      {/* Evaluation */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <SectionHeading title="Evaluation Criteria" subtitle="Total: 100 points" />
+          <div className="max-w-2xl mx-auto space-y-3">
+            {criteria.map((c, i) => (
+              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.05 }} className="flex items-center gap-4">
+                <div className="flex-1">
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-foreground/80">{c.label}</span>
+                    <span className="text-secondary font-heading font-bold">{c.score}</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-muted overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${c.score}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: i * 0.1 }}
+                      className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-muted/20">
         <div className="container mx-auto max-w-3xl">
           <SectionHeading title="Rules & Guidelines" />
