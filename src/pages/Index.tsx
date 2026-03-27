@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Zap, Recycle, Building2, Sprout, TreePine, Heart,
   Users, Lightbulb, Trophy, GraduationCap, Globe
 } from "lucide-react";
 import HeroScene from "@/components/HeroScene";
 import CountdownTimer from "@/components/CountdownTimer";
 import SectionHeading from "@/components/SectionHeading";
-import TrackModal, { Track } from "@/components/TrackModal";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -16,15 +13,6 @@ const fadeUp = {
   viewport: { once: true },
   transition: { duration: 0.6 },
 };
-
-const tracks: Track[] = [
-  { title: "Smart Energy & Climate Tech", icon: "⚡", problems: [{ title: "Overview", description: "Build innovative solutions for energy monitoring, solar optimization, and carbon footprint reduction." }] },
-  { title: "Waste Management & Circular Economy", icon: "♻️", problems: [{ title: "Overview", description: "Create smart waste segregation, fill-level monitoring, and recycling platforms." }] },
-  { title: "Sustainable Cities & Infrastructure", icon: "🏙️", problems: [{ title: "Overview", description: "Design smart street lighting, water leakage detection, and air quality monitoring systems." }] },
-  { title: "Sustainable Agriculture & Food Systems", icon: "🌱", problems: [{ title: "Overview", description: "Develop smart irrigation, crop health monitoring, and food waste reduction solutions." }] },
-  { title: "Biodiversity & Environmental Monitoring", icon: "🌿", problems: [{ title: "Overview", description: "Build forest fire detection, wildlife tracking, and water quality monitoring devices." }] },
-  { title: "Sustainable Lifestyle & Behavioral Change", icon: "💚", problems: [{ title: "Overview", description: "Create eco-friendly product recommenders, carbon trackers, and gamified sustainability platforms." }] },
-];
 
 const whyCards = [
   { icon: Globe, text: "Work on real sustainability problems" },
@@ -35,7 +23,6 @@ const whyCards = [
 ];
 
 const Index = () => {
-  const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
 
   return (
     <div className="min-h-screen">
@@ -123,28 +110,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* TRACKS */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <SectionHeading title="Event Tracks" subtitle="Explore 6 sustainability tracks across Hackathon and Studyathon." />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {tracks.map((t, i) => (
-              <motion.button
-                key={i}
-                {...fadeUp}
-                transition={{ delay: i * 0.08 }}
-                onClick={() => setSelectedTrack(t)}
-                className="glass rounded-xl p-6 text-left hover:glow-green-sm transition-all hover:-translate-y-1 group"
-              >
-                <span className="text-3xl mb-3 block group-hover:animate-float">{t.icon}</span>
-                <h3 className="font-heading font-semibold text-sm text-foreground">{t.title}</h3>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <TrackModal track={selectedTrack} onClose={() => setSelectedTrack(null)} />
 
       {/* CTA */}
       <section className="py-24 px-4">
