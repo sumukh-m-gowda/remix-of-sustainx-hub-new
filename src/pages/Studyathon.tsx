@@ -61,8 +61,6 @@ const rules = [
   "Teams must follow presentation time limits.",
 ];
 
-const maxScore = 20; // IMPORTANT FIX
-
 const Studyathon = () => (
   <div className="min-h-screen pt-24">
 
@@ -211,7 +209,7 @@ const Studyathon = () => (
       </div>
     </section>
 
-    {/* Evaluation Criteria (FIXED) */}
+    {/* Evaluation Criteria */}
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-2xl">
 
@@ -248,7 +246,7 @@ const Studyathon = () => (
                   initial={{ width: 0 }}
 
                   whileInView={{
-                    width: `${(c.score / maxScore) * 100}%`,
+                    width: "100%",
                   }}
 
                   viewport={{ once: true }}
