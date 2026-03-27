@@ -77,6 +77,12 @@ const tracks: Track[] = [
       { title: "Gamified Sustainability Challenge Platform", description: "Build a platform where users participate in eco-friendly challenges and earn rewards." },
     ],
   },
+  {
+    title: "Open Track", icon: "🌍",
+    problems: [
+      { title: "Open Track", description: "Under the theme \"Innovating for a Sustainable Future,\" participants in the Open Track may choose to work on any sustainability-focused problem of their choice. Teams are encouraged to develop innovative solutions addressing real-world environmental and societal challenges. Submissions should clearly demonstrate innovation, feasibility, and meaningful sustainability impact." },
+    ],
+  },
 ];
 
 const criteria = [
