@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, BookOpen, Scale } from "lucide-react";
 import { Users, BookOpen, Scale, FileText, Presentation, Lightbulb, Rocket, CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import TrackModal, { Track } from "@/components/TrackModal";
