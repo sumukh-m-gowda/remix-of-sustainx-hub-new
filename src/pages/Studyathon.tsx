@@ -64,7 +64,7 @@ const Studyathon = () => (
           {[
             { icon: Users, text: "3–4 participants per team" },
             { icon: BookOpen, text: "Cross-discipline collaboration encouraged" },
-            { icon: Scale, text: "Register by 12 March 2026" },
+            { icon: Scale, text: "Register by 9 March 2026" },
           ].map((item, i) => (
             <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="glass rounded-xl p-6 text-center">
               <item.icon className="mx-auto mb-3 text-primary" size={28} />
