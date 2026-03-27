@@ -115,7 +115,7 @@ const Hackathon = () => {
       </section>
 
       {/* Team Structure */}
-      <section className="py-12 px-4 bg-muted/20">
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-3xl">
           <SectionHeading title="Team Structure" />
           <div className="grid sm:grid-cols-3 gap-4">
