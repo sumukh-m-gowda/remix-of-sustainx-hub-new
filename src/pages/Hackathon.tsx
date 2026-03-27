@@ -118,7 +118,7 @@ const Hackathon = () => {
         <div className="container mx-auto">
           <SectionHeading title="Problem Tracks" subtitle="Click on a track to see all problem statements." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {tracks.map((t, i) => (
+            {tracks.slice(0, -1).map((t, i) => (
               <motion.button
                 key={i}
                 {...fadeUp}
@@ -131,6 +131,18 @@ const Hackathon = () => {
                 <p className="text-xs text-muted-foreground">{t.problems.length} problem statements</p>
               </motion.button>
             ))}
+          </div>
+          <div className="flex justify-center mt-4 max-w-5xl mx-auto">
+            <motion.button
+              {...fadeUp}
+              transition={{ delay: tracks.length * 0.08 }}
+              onClick={() => setSelectedTrack(tracks[tracks.length - 1])}
+              className="glass rounded-xl p-6 text-left hover:glow-green-sm transition-all hover:-translate-y-1 group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)]"
+            >
+              <span className="text-4xl mb-3 block">{tracks[tracks.length - 1].icon}</span>
+              <h3 className="font-heading font-bold text-foreground mb-1">{tracks[tracks.length - 1].title}</h3>
+              <p className="text-xs text-muted-foreground">{tracks[tracks.length - 1].problems.length} problem statement</p>
+            </motion.button>
           </div>
         </div>
       </section>
