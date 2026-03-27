@@ -14,7 +14,7 @@ const Register = () => (
         Register for <span className="text-primary">Sustain</span><span className="text-secondary">X</span>
       </h1>
       <p className="text-muted-foreground text-sm mb-8">
-        Scan the QR code to register via PESU Academy Portal.
+        Scan the QR code to register.
       </p>
 
       <div className="mx-auto w-48 h-48 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mb-6 overflow-hidden">
