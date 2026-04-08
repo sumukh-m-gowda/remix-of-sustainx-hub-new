@@ -34,9 +34,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <Link to="/" className="font-heading text-xl font-bold tracking-tight">
+        <Link to="/" className="font-heading text-xl font-bold tracking-tight flex items-center gap-2">
           <span className="text-primary">Sustain</span>
           <span className="text-secondary">X</span>
+          <span className="text-lg">🤝</span>
+          <img
+            src="/image121.png"
+            alt="TechlineGreen"
+            className="h-8 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop */}
