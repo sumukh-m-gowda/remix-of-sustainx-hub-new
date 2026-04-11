@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import solarisLogo from "@/assets/solaris-logo.png";
+import techlineGreenLogo from "@/assets/techline-green-logo.png";
 import { motion } from "framer-motion";
 import {
   Users, Lightbulb, Trophy, GraduationCap, Globe
@@ -30,25 +31,61 @@ const Index = () => {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <HeroScene />
+
         <div className="container mx-auto px-4 text-center z-10 py-32">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <img src={solarisLogo} alt="Solaris" className="h-16 md:h-24 mx-auto mb-4" />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+
+            {/* 🔥 CO-BRANDING ROW */}
+            <div className="flex items-center justify-center gap-6 mb-6">
+
+              {/* Solaris Logo */}
+              <img
+                src={solarisLogo}
+                alt="Solaris"
+                className="h-14 md:h-20 opacity-90 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"
+              />
+
+              {/* X Symbol */}
+              <span className="text-3xl md:text-5xl font-bold text-muted-foreground/70 animate-pulse">
+                ×
+              </span>
+
+              {/* Techline Logo */}
+              <img
+                src={techlineGreenLogo}
+                alt="Techline Green"
+                className="h-14 md:h-20 object-contain opacity-90 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"
+              />
+            </div>
+
+            {/* 🔥 MAIN TITLE */}
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-black mb-4 leading-tight">
-              <span className="text-primary">Sustain</span>
-              <span className="text-secondary">X</span>
+              <span className="text-primary glow-text">Sustain</span>
+              <span className="mx-2 text-5xl md:text-7xl text-primary/80 animate-pulse">X</span>
             </h1>
+
+            {/* TAGLINE */}
             <p className="text-lg md:text-xl text-foreground/80 font-heading font-medium mb-2">
               Innovation for a Sustainable Future
             </p>
+
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-8">
-              A sustainability-focused Hackathon and Studyathon bringing together innovators, researchers, and problem solvers to develop impactful solutions to global environmental challenges.
+              A sustainability-focused Hackathon and Studyathon bringing together innovators,
+              researchers, and problem solvers to develop impactful solutions to global environmental challenges.
             </p>
+
           </motion.div>
 
+          {/* TIMER */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
             <CountdownTimer />
           </motion.div>
 
+          {/* DATE + LOCATION */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -60,10 +97,16 @@ const Index = () => {
             <span>📍 MRD Auditorium, PESU ECC</span>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="mt-8">
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="mt-8"
+          >
             <Link
               to="/register"
-              className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-heading font-semibold glow-green animate-pulse-glow hover:scale-105 transition-transform"
+              className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-heading font-semibold glow-green hover:scale-105 transition-transform"
             >
               Register Now
             </Link>
